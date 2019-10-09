@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="CSS/base.css">
+  <link rel="stylesheet" href="CSS/products.css">
+  <script src="JS/vue.js"></script>
+  <title>产品列表</title>
+  <style></style>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+  </header>
+  <section class="products_section">
+    <div id="app" class="container">
+      <!-- 头部导航 -->
+      <div>
+        <div class="nav_products">
+          <ul>
+            <li class="ml-3">
+              <a href="#">自由行</a>
+            </li>
+            <li>
+              <a href="#">机票</a>
+            </li>
+            <li>
+              <a href="#">跟团游</a>
+            </li>
+            <li>
+              <a href="#">半自助游</a>
+            </li>
+            <li>
+              <a href="#">日游小团</a>
+            </li>
+            <li>
+              <a href="#">最世界独家</a>
+            </li>
+            <li>
+              <a href="#">邮轮</a>
+            </li>
+            <li>
+              <a href="#">酒店</a>
+            </li>
+            <li>
+              <a href="#">签证</a>
+            </li>
+            <li>
+              <a href="#">保险</a>
+            </li>
+            <li>
+              <a href="#">城市交通</a>
+            </li>
+            <li>
+              <a href="#">门票/票卷</a>
+            </li>
+            <li>
+              <a href="#">WiFi电话卡</a>
+            </li>
+          </ul>
+        </div>
+        <div class="crumb_seachr">
+          <ul class="clearfix list-unstyle">
+            <li class="float-left ml-4">您已选择&gt</li>
+            <li class="float-left "> &nbsp "{{decodeURI(this.kw)}}"</li>
+          </ul>
+        </div>
+        <div class="stwrap mt-4">
+          <ul class="list-unstyle d-flex">
+            <li class="sort_default">
+              <a href="#">综合排序</a>
+            </li>
+            <li>
+              <a href="#">销量↓</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 产品列表 -->
+      <div>
+        <div class="zw-module-productlist mt-4">
+          <!-- 左边详情主要列表 -->
+          <div class="zw-new-bigcard-wrap">
+            <!-- 产品1 -->
+            <div class="zw-new-bigcard-item clearfix mt-3" v-for="(item,i) in res" >
+              <a href="" class="float-left" @click.prevent="getdetails(item.tid)">
+                 <img class="img-fluid" :src="item.md"></a>
+              <div class="zw-new-bigcard-item-section">
+                <div class="zw-new-bigcard-item-tag float-left">
+                  <h4><a href="#">{{item.title}}</a></h4>
+                </div>
+                <div class="zw-new-bigcard-item-middle mt-2">
+                  <ul>
+                    <li>秒杀</li>
+                  </ul>
+                </div>
+                <div class="zw-new-bigcard-item-bottom ml-1 ">
+                  <div class="zw-new-bigcard-item-price">
+                    <div class="item-price">
+                      <span>¥</span>
+                      <span style="color:#999"><b style="color:#ff7363; font-size:25px;">{{item.price}}</b> 起</span>
+                      <span class="line">{{item.price}}元</span>
+                    </div>
+                  </div>
+                  <div class="zw-new-bigcard-item-booking">
+                    <div class="sold_out">
+                      <span>{{item.sold_count}}</span>
+                      <span>件已售</span>
+                    </div>
+                    <div class="item-booking_btn">
+                      <p>立即预定</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- 右边本周热卖 -->
+          <div class="zw-new-bigcard-aside">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 分页内容 -->
+    <div class="btn_area">
+      <span @click="prev()" :class="disabled_info_prev">上一页</span>
+      <span v-for="(item,i) in pageCount" :class="{btn_area_active:changeActive==i}" @click.prevent="nowNum(i)" >{{i+1}}</span>
+      <span @click="next()" :class="disabled_info_next">下一页</span>
+    </div>
+  </section>
+  <footer id="i-footer">
+  </footer>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="JS/axios.min.js"></script>
+  <script src="JS/header.js"></script>
+  <script src="JS/i-footer.js"></script>
+  <script src="js/products.js"></script>
+</body>
+
+</html>

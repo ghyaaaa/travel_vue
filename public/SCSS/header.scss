@@ -1,0 +1,435 @@
+@import"color.scss";
+.my_fontColor{
+    color: #C0C0C0;
+ }
+header{
+    width:100%;
+    background-image:linear-gradient(180deg,#323232,#2A2A2A);
+    ul{
+        list-style: none;
+    }
+}
+.header-inner {
+    white-space: nowrap;
+    display: flex;
+    padding:3px;
+    //头部导航左侧q穷游图标
+    a img{
+    width:58px;
+    height:18px;
+    margin-left:30px;
+}
+}
+@media screen and (max-width:1460px){
+    .header-inner{
+        width:1460px;
+       margin-left:10px;
+    }
+}
+//列表样式
+//列表样式
+.q-header-nav{ 
+    ul{
+        display:flex;
+       li:first-child{
+           margin-left:20px;
+       }
+       //下拉菜单中的样式修饰 社区
+       li:nth-child(3){
+                 ol li{
+              margin:0;
+               padding:5px 15px;
+               &:hover{
+                   background:#E3FAE1;    
+               }
+               a{
+                font-weight: normal;
+                color:#666;
+               }
+           }
+        &:hover ol{
+            max-height: 240px;
+            opacity: 1;
+       }
+       //第一个li中旅行论坛小图标
+       &:hover ol li:first-child :after{
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 1em;
+        vertical-align: 0em;
+        content: "";
+        border-top: 0.3em solid transparent;
+        border-right: 0;
+        border-bottom: 0.3em solid transparent;
+        border-left: 0.4em solid #666;
+       }
+    }
+    
+      
+//下拉菜单  商城 酒店 民宿
+li:nth-child(5),li:nth-child(7),li:nth-child(8),li:last-child{   
+    ol li{
+  margin:0;
+ padding:5px 15px;
+  &:hover{
+      background:#E3FAE1;  
+  }
+  a{
+   font-weight: normal;
+   color:#666;
+  }
+}
+&:hover ol{
+max-height: 260px;
+opacity: 1;
+}
+}
+    //每个列表的间距
+        li{ 
+                   
+            margin-left:30px;
+        }
+    a{
+        text-decoration: none;
+        font-weight:bold;
+        color:$my_t_fontColor;
+        font-size:14px;
+        &:hover{
+            color:$my_hoverColorcolor;
+        }
+    }
+}
+}
+
+// 头部右侧图标注册登录
+.q-header-fun{
+    width:100%;
+    margin-left:25%;
+    padding-right:2%;
+    ul{
+        display: flex;
+        li{
+            margin:0;
+            margin-left:8px;
+            &:first-child {
+                color:$my_t_fontColor;
+                padding-left:10px;
+                a{
+                    opacity: 0;
+                    //  &:hover{
+                    //      opacity: 0;
+                    //  }
+                }
+                span {
+                    &:hover a{
+                        opacity: 1;
+                        transition:all .6s linear;
+                    }
+                }
+                
+            }
+            img{
+                width:18px;
+                height:16px;
+                margin-left:10px;
+                &:hover{
+                    border:1px solid $my_hoverColorcolor;
+                }          
+            }
+            a{
+                text-decoration: none; 
+                color:$my_t_fontColor;
+                &:hover{
+                    color:$my_hoverColorcolor;
+                }
+            }
+        }
+    }
+}
+//头不右侧图标媒体查询
+@media screen and (max-width:1700px) and(min-width:1100px){
+    .q-header-fun{
+        margin-right: 30%;
+       margin-left:20%;
+       position: relative;
+       left:-5%;
+    }
+}
+
+//输入框样式
+.zw-product-header-search{
+    input{
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #000;
+        font-size: 1em;
+        height: 20px;
+        padding: 0px 16px;
+        background:#fff url("../img/icon/fangdajinghei.png") no-repeat  99% center;
+        background-size:contain; 
+        outline: 0;
+        display: block;
+        width: 500px;
+        padding: 10px 8px;
+        line-height: 1.5;
+        background-color: #F1F1F1;
+        border-radius: 20px;
+        font-size: 8px  
+    }
+}
+// 
+.ml-3{
+    margin-left:5px; 
+}
+.mr-3{
+    margin-right:2rem;
+}
+//下拉菜单
+.dropdown {
+    position: relative;
+    img{
+        width:50px;
+        height: 14px;
+        position: relative;
+        top:-6px;
+    }
+  }
+  .dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid $my_t_fontColor;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+  //下拉菜单样式
+@mixin dropdown-style {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 6rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529 ;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    max-height: 0px;
+    transition: all 0.5s ease;
+    opacity:0;
+    overflow: hidden;
+  }
+  .dropdown-menu {
+   @include dropdown-style;
+   z-index: 1001;
+    img{
+       position: relative;
+       top:3px;
+        width:18px;
+        height:13px;
+        padding:0 5px;
+    }
+  }
+ 
+  .dropdown-menu1 {
+    @include dropdown-style;
+    z-index: 1001;
+    
+    img{
+        position: relative;
+       top:3px;
+        width:18px;
+        height:13px;
+        padding:0 5px;
+    }
+  }
+//   二级导航 背景
+.zw-header-new-wrapper{
+    background:linear-gradient(180deg,#43C67B,#10BFA4);
+ 
+
+}
+.zw-header-new-mainnav{
+    li {
+       padding-left:1rem; 
+        a{
+        color:#fff; 
+        text-decoration: none;
+        }
+   }
+}
+
+// 白色图标的下拉图标
+.dropdown-toggle-white::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid #fff;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+//   右侧小导航 签证玩乐
+.zw-header-new-subnav{
+    //加一条小横线
+    li:not(:last-child):after{
+        content:"|";
+        display:inline;
+        color:#0C5F44;
+        opacity: .5;
+        padding:0 7px;
+    }
+     li a{
+        text-decoration: none;
+        color:#0C5F44;
+        padding-left:5px;
+    }
+}
+//隐藏菜单中的样式  机酒自由行
+.zw-header-new-mainnav{
+    ol{
+        display: none !important;
+    }
+    li:first-child,li:nth-child(3),li:nth-child(5),li:last-child {
+        &:hover {
+            background-color:rgb(29, 161, 117);
+        }
+        &:hover ol{
+           display: inline-block !important;
+           li{
+               float:left;
+               background-color:transparent !important;
+               font-size:14px;
+              
+           }
+        }
+        ol li{
+            &:first-child,&:last-child{
+                background: #fff;
+            }
+            margin:0;
+            padding:5px 15px;    
+      a{
+       font-weight: normal;
+       color:#666;
+       &:hover{
+           color:rgb(17, 192, 134);
+       }
+      }
+  }
+    }
+    img{
+        width:25px;
+        position: relative;
+        top:2px;
+    }
+}
+
+.dropdown-menu2{
+    @include dropdown-style;
+    border:0px;
+    z-index: 10001;
+}
+.dropdown-menu3{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-color: #fff;
+    width: 240px;
+    height: auto;
+    padding: 5px 5px 10px 25px;
+    border: 1px solid #e3e3e3;
+    z-index: 100;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 0 18px rgba(0,0,0,.2);
+    list-style: none;
+  
+}
+/*********穷游商城 第三个导航栏 ***********/
+.zw-home-header{
+    background:#fff;
+}
+.zw-home-header-logo{
+    a{
+        text-decoration: none;
+    }
+    h1{
+        color:#13AF7E;
+        font-weight: normal;
+        
+    }
+}
+.zw-home-header-search{
+    position: relative;
+}
+.input-group-append{
+    img{
+        position: absolute;
+        width:32px;
+        height:32px;
+        top:5px;
+        left:480px;
+        cursor: pointer;
+    }
+
+}
+// 输入框 搜索框
+.my-form-control{
+    outline:0;
+    display:block;
+    width:500px;
+    padding:10px 8px;
+    line-height: 1.5;
+    background-color:#F1F1F1;
+    border-radius: 20px;
+    font-size:8px;
+    // background:#F1F1F1 url("../img/icon/fangdajinghei.png") no-repeat 98% center;
+    background-size:20px 20px;
+     
+}
+// 右侧下载APP
+.zw-home-header-app{
+    position: relative;
+    top:-8px;
+    .logo{
+        img{
+    margin: 12px 12px 12px 20px;
+    width: 40px;
+    height: 40px;
+        }
+    }
+    .title-box{
+        p:first-child{
+            font-weight: bold;
+            font-size:12px;
+        }
+        p:last-child{
+            font-size:8px;
+            color:#666;
+        }
+    margin: 14px 0;
+    }
+    a{
+        line-height: 30px;
+        width:50px;
+        height:30px;
+        display:block;
+        text-decoration: none;
+    }
+}

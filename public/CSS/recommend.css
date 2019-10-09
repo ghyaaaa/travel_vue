@@ -1,0 +1,93 @@
+body{
+    background: #f5f5f5;
+    margin-left:5rem;
+}
+/* 清除浮动 */
+.clear::after{
+    content:'';
+    display:block;
+    clear:both;
+}
+/* 右浮动 */
+.float-right{
+    float:right;
+}
+/* 文字两排隐藏 */
+.text-ellipsis{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* css3新属性 */
+  display:-webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+}
+.zw-recommdendation-wrap{
+    width:260px;
+    height:569px;
+    background: #fff;
+}
+/* 头部样式 文字标题 */
+.zw-recommdendation-wrap .item-header{
+   
+}
+.zw-recommdendation-wrap .item-header h3{
+    color:#636363;
+    font-weight: 600;
+    float:left;
+    margin:10px;
+}
+.zw-recommdendation-wrap .item-header a{
+    text-decoration: none;
+    color:#666;
+    float:right;
+    margin:15px 10px;
+}
+.zw-recommdendation-wrap .item-header a:hover{
+    color:#3DC681;
+}
+/* 列表样式 图片 */
+.zw-recommendation-section .recommendation-list{
+    list-style: none;
+}
+.zw-recommendation-section .recommendation-list .recommendation-list-item{
+   margin:15px 10px;
+   overflow: hidden;
+   cursor: pointer;
+   position: relative;
+}
+.zw-recommendation-section .recommendation-list .recommendation-list-item .price_discount{
+   position: absolute;
+   background: #ff7467;
+   z-index: 1;
+   top:0rem;
+   color:#fff;
+   padding:1px;
+
+}
+.zw-recommendation-section .recommendation-list .recommendation-list-item:hover{
+    color:#3DC681;
+}
+.zw-recommendation-section .recommendation-list .recommendation-list-item .item-box{
+    width:150px;
+}
+.zw-recommendation-section .recommendation-list .recommendation-list-item a img{
+    width:80px;
+    height:80px;
+}
+.zw-recommendation-section .recommendation-list .recommendation-list-item .item-info h6{
+    font-weight: normal;
+    font-size:14px;
+ }
+ /* 价格区域 */
+ .zw-recommendation-section .recommendation-list .recommendation-list-item .item-price{
+    margin-top:17px;
+ }
+ .zw-recommendation-section .recommendation-list .recommendation-list-item .item-price span{
+   color:#ff7467;
+   font-size:20px;
+}
+.zw-recommendation-section .recommendation-list .recommendation-list-item .item-price em{
+    font-style: normal;
+    font-size:12px;
+    color:#666;
+}

@@ -1,0 +1,105 @@
+.zw-footerprepend {
+  background: #F5F5F5;
+  line-height: 50px; }
+  .zw-footerprepend .zw-footer-nav {
+    list-style: none;
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px; }
+    .zw-footerprepend .zw-footer-nav li:not(:last-child)::after {
+      content: "|";
+      margin: 0 1.2rem;
+      color: #ddd; }
+    .zw-footerprepend .zw-footer-nav li a {
+      font-size: 18px;
+      color: #323232;
+      font-weight: 400;
+      text-decoration: none; }
+      .zw-footerprepend .zw-footer-nav li a:hover {
+        color: #3DC681; }
+
+.zw-footer-feature {
+  list-style: none;
+  padding: 20px;
+  display: flex; }
+  .zw-footer-feature .zw-footer-feature-icon img {
+    width: 56px;
+    height: 56px; }
+  .zw-footer-feature .zw-footer-title {
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px; }
+  .zw-footer-feature .zw-footer-content {
+    color: #959595;
+    position: relative;
+    top: 20px;
+    left: -60px;
+    width: 300px;
+    line-height: 16px; }
+
+.my-br {
+  line-height: 20px; }
+
+.my_i_footer {
+  background: #333333;
+  color: #C0C0C0;
+  white-space: nowrap; }
+
+.footer {
+  width: 1160px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex; }
+  .footer p {
+    font-size: 12px; }
+
+.footer1-about {
+  display: flex;
+  list-style: none;
+  font-size: 12px; }
+  .footer1-about li {
+    margin-left: 20px; }
+    .footer1-about li span {
+      margin-left: 20px; }
+    .footer1-about li a {
+      color: #C0C0C0;
+      text-decoration: none; }
+      .footer1-about li a:hover {
+        text-decoration: underline; }
+  .footer1-about:last-child {
+    margin-top: 10px; }
+
+.footer1-1 {
+  display: flex; }
+  .footer1-1 h1 {
+    color: #fff;
+    margin-top: 50px; }
+  .footer1-1 h6 {
+    padding: 55px 20px;
+    font-weight: normal; }
+
+.footer1 ul:last-child {
+  padding-bottom: 50px; }
+
+.footer2 ul {
+  margin-top: 60px; }
+  .footer2 ul h2 {
+    color: #fff;
+    font-weight: normal;
+    margin-top: 10px; }
+
+.footer2 .footer2-1 h3 {
+  color: #fff;
+  font-weight: normal; }
+
+.footer2 .footer2-1 ul {
+  margin: 10px auto; }
+  .footer2 .footer2-1 ul li:last-child {
+    background: #FFF;
+    width: 100px;
+    height: 100px; }
+    .footer2 .footer2-1 ul li:last-child img {
+      padding: 5px; }

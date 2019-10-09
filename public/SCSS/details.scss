@@ -1,0 +1,598 @@
+@import"color.scss";
+.my-form-control1 {
+    border:1px solid #00b081;
+    outline: 0;
+    display: block;
+    width: 500px;
+    padding: 10px 8px;
+    line-height: 1.5;
+    background-color: #F1F1F1;
+    font-size: 8px; }
+//我的订单  我的收藏  
+ .zw-product-header-love{
+     margin-left:180px;
+     
+     ul{
+         list-style: none;
+         li{
+             &:hover{
+                 opacity: 0.7;
+             }
+         }
+     }
+     a{
+        color:#00b081;
+        text-decoration: none;
+     }
+     img{
+         width:18px;
+         height:18px;
+     }
+ }
+
+//  主要内容
+.zw-product-main{
+    background: $my-main-Color;
+    width:1160px;
+    margin:0px auto 0;
+    //清楚外边距垂直抵消问题
+    &:before{
+        content:'';
+        display: table;
+    }
+}
+// 左边图片内容
+.leftslide{
+    width:530px;
+    span{
+        position:absolute;
+        color:#fff;
+        margin:10px;
+        font-size:8px;
+    }
+    div.lg_img{
+        img{
+            width:510px;
+            height:330px;
+            
+        }
+    }
+}
+// 下方小图滑动
+.img_slide{
+    border:1px solid #ddd;
+   width:510px;
+    p{
+        width:30px;
+        height:80px;
+        z-index: 10;
+        &:hover{
+            background: rgb(216, 214, 214);
+            cursor: pointer;
+        }
+        img {
+            width:22px;
+            height:32px;
+        }
+    }
+    div:first-child{
+       width:510px;
+    }
+    .disabled{
+        opacity: .4;
+    }
+   
+}
+.slidearea{
+    width:400px;
+    overflow: hidden;
+}
+// 小图列表
+.sm_img_list{
+    overflow: hidden !important;
+    transition: all .5s linear;
+   li{
+       width:70px;
+       height:65px;
+       margin-top:10px;
+       background: #fff;
+   }
+   img{
+       width:65px;
+   &:hover{
+      cursor: pointer;
+      opacity: 0.8;
+      transform: scale(1.1)
+   }
+}
+}
+// 日期选择
+.calendar{
+    background: #fff;
+    width:510px;
+&:before{
+        content:'';
+        display: table;
+    }
+    a{
+        text-decoration: none;
+        color:#636363;
+        font-size: 13px;
+    }
+    // 清楚上边距带来的影响
+    .tabs{
+        img{
+            width:8px;
+            height:12px;
+            margin:5px 0 5px 25px; 
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    .active{
+        border-bottom:4px solid #ff7467;
+    }
+}
+.week-header{
+    margin-left:25px;
+    width:450px;
+    background: #f5f5f5;
+    span{
+        color:#636363;
+        position: relative;
+        display: inline-block;
+        padding:3px 13px;
+    }
+}
+.date-section{
+    width:510px;
+    overflow: hidden;
+  .showPrice:hover{
+      border:1px solid #ff7466;
+      cursor: pointer;
+
+  }
+}
+.row_1AIx- {
+    height: 69px;
+    border-bottom: 1px solid #f5f5f5;
+    p{
+        text-align: center;
+        margin-top:3px;
+        margin-right:2px;
+        color:#ff7467;
+        font-size:12px;
+        font-weight: 500;
+    }
+}
+.cell_1gqH2 {
+    color: #636363;;
+    height: 70px;
+    width: 70px;
+    float: left;
+    cursor: not-allowed;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+// 右边部分内容
+.rightside{
+    width:590px;
+    background: #ffff;
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.8);
+    box-sizing: border-box;
+    position: relative;
+}
+.product_info{
+    font-size: 20px;
+    font-weight: 400;
+ }
+.product_info_special{
+      p{
+          color:#3DC681;
+          border:1px solid #3DC681;
+          font-size:8px;
+          height:15px;
+          width:80px;
+      }
+}
+.product_price{
+    p.price{
+        color:#666;
+        font-size:26px;
+        span{
+            font-size:12px;
+        }
+    }
+    .view,.sales{
+        font-size:14px;
+        line-height: 24px;
+        color:rgb(195, 195, 195);
+        .view_count,.sales_count{
+            font-weight: bold;
+            margin-left:0.2rem;
+        }
+    }
+}
+.product_info_more{
+    width:550px;
+    background:#F0FAF7;
+    p{
+        color:#636363;
+        font-size:14px;
+        line-height: 20px;
+    }
+}
+// 温馨提示
+.warm_prompt{
+    h5{
+        color:#636363;
+    }
+    p{
+        color:#636363;
+        font-size:13px;
+    }
+}
+// 预订类型
+.booking_type{
+ 
+    h4{
+        margin-left:15px;
+        padding-top:20px;
+        color:#636363;
+        &:first-child{
+            border-top:1px dashed #ddd;
+        }
+    }
+    
+    ul.type_list{
+        li{
+            margin-top:5px;
+            margin-left:10px;
+            // width:400px;
+            height:36px;
+            padding:0 10px;
+            float:left;
+            font-size:16px;
+            border:1px solid #ddd;
+            line-height: 36px;
+            text-align: center;
+            &:hover{
+                border:1px solid #666;
+            }
+            a{
+                text-decoration: none;
+                color:#000;
+            }
+        }
+    }
+}
+.date_out{
+    h4{
+        border:0 !important;
+    }
+}
+.booking_active{
+    
+        border: 2px solid #ff7466 !important;
+        box-shadow: 0 8px 10px rgba(255, 116, 102, .12);
+    
+    a{
+       color: #ff7466 !important;
+    }
+    line-height: 34px;
+    padding: 0 24px
+}
+.date_input{
+    width:180px;
+    height:36px;
+    line-height:36px;
+    margin:20px 0px 0px 15px;
+    position: relative;
+    color:#000;
+    padding-left:10px;
+}
+.attention{
+    p{
+        background: #fffae7;
+        position: relative;
+        font-size:14px;
+        padding:10px 15px 10px 15px;
+        color:#636363;
+    }
+}
+.price_submit {
+    width: 590px;
+    height: 60px;
+    color: #ff7466;
+    padding-left: 20px;
+    line-height: 60px;
+    vertical-align: middle;
+    position: absolute;
+   bottom:0px;
+    display: flex;
+
+
+  }
+.total_price{
+    font-size:30px;
+}
+.order_button{
+    display: inline-block;
+    width: 160px;
+    height:60px;
+    color:#fff;
+    font-size:24px;
+    background: #ff7466;
+    border:0;
+    position: absolute;
+    left:430px;
+   &:hover{
+       opacity: 0.9;
+       cursor: pointer;
+   }
+}
+// 商品添加按钮
+.people_count{
+   ul li h4{
+        font-size:14px;
+        font-weight:800;
+
+    }
+}
+.pep_a_price,.pep_a_conut{
+    color:#ff7466;
+    font-size:8px;
+}
+div.input_count{
+    margin-top:0.5rem;
+    border:1px solid #eee;
+    span{
+        padding:0.5rem;
+    }
+    button{
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.2rem 0.6rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+    }
+    // 下方详细图
+    .product_info_content{
+        margin-top:50px;
+
+    }
+    .product_info-content1{
+        width:860px;
+        position: relative;
+    }
+   .tab-wrapper{
+    border-bottom: 2px solid #ddd;
+   }
+    .tabs_details{
+        padding-right:20px;
+        background: #fff;
+        white-space: nowrap;
+       li{
+           padding:20px;
+           color:#636363;
+           &:last-child{
+               img{
+                   width:15px;
+                   height:15px;
+                   margin: 2px;
+               }
+               p{
+                   width:100px;
+               }
+               p:hover img{
+                width:160px;
+                height:160px;
+                position: absolute;
+                top:50px;
+                left:750px;
+                z-index: 10;
+              
+            }
+           }
+       }
+        a{
+           
+            text-decoration: none;
+            color:#636363;
+            font-weight: 500;
+            font-size:16px;
+            &:hover{
+               
+                font-weight: bold;
+                color: #00b081
+            }
+        }
+    }
+    // 预定详情页面 
+    .content_All{
+        position: relative;
+        background: #fff;
+        width:860px;
+        
+   
+    }
+    .prebook_parent,.traffic_info,.price_intro,.price_refund,.consult{
+        text-align: center;
+        margin-top: 2px;
+        overflow: hidden;
+      
+    }
+  .product_intro_info{
+      display: flex;
+      justify-content: space-around;
+      margin-top:40px;
+      h5{
+        font-size:16px;
+      }
+      p{
+        width:550px;
+        text-align: left;
+        color:#636363;
+        font-size:14px;
+      }
+      img{
+       
+          height:107px;
+      }
+  }
+  .price_refund{
+      p{
+          color:red;
+          padding:35px 30px;
+          font-size:15px;
+      }
+  }
+  .traffic_info{
+      position: relative;
+  }
+  .quatationleft{
+    position: absolute;
+    font-size:50px;
+    color:#00b081;
+    top:30px;
+    left:200px;
+}
+.quatationright{
+    position: absolute;
+    font-size:50px;
+    color:#00b081;
+    top:120px;
+    left:680px;
+}
+.traffic_intro_info{
+    h6{
+        color:gray;
+    }
+    p{
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+    }
+
+}
+.traffic_info_place{
+        h5{
+            padding:5px;
+            background: #00b081;
+            color:#fff;
+        }
+}
+.traffic_info_way{
+    margin-left:190px;
+    margin-top:25px;
+    ul{
+        display: flex;
+        list-style: none;
+        li{
+            margin-left:35px;
+            font-size:12px;
+            &:nth-child(3),&:nth-child(5){
+                p{
+                    position: relative;
+                        top:-12px;
+                    &:first-child{
+                        color:#666;
+                        font-size:24px; 
+                    }
+                    &:last-child{
+                        color:#00b081;
+                        padding: 2px;
+                    }
+                }
+            }
+            &:nth-child(4){
+                div{
+                    display: flex;
+                    width:50px;
+                    height:2px;
+                    background-color:#00b081;
+                    position: relative;
+                    top:12px;
+                    span{
+                            content:"";
+                            display: inline-block;
+                            width:4px;
+                            height:4px;
+                            border:1px solid #00b081;
+                            border-radius: 50%;
+                            &:first-child{
+                                position: absolute;
+                                left:-6px;
+                                top:-2px;
+                            }
+                            &:last-child{
+                                position: absolute;
+                                left:50px;
+                                top:-2px;
+                            }
+                    }
+                }
+                
+            }
+            &:first-child{
+                background: #00b081;
+                color:#fff;
+                width:20px;
+                height:20px;
+            }
+        }
+    }
+}
+// 推荐行程
+.recommended_travel{
+    text-align: center;
+    img{
+        width:800px;
+    }
+}
+// 咨询
+.consult{
+    .product_intro_info{
+        display: flex;
+        margin-top:40px;
+        p :first-child{
+          border:1px solid transparent;
+          border-radius: 50%;
+          font-size:14px;
+        }
+    }
+}
+div.textarea-box{
+    position: relative;
+    left:-70px;
+}
+.textarea-box1{
+    width:580px;
+    background: #eee;
+    box-shadow: none;
+    border: 20px solid #ececec;
+    button{
+        background: #3DC681;
+        color:#fff;
+        margin-left:500px; 
+        margin-top:15px;
+    }
+}
+.textarea{
+    width:550px;
+    height:80px;
+}

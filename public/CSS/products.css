@@ -1,0 +1,152 @@
+.products_section {
+  background-color: #F5F5F5; }
+
+.nav_products {
+  height: 51px;
+  border-left: 1px solid #E3E3E3;
+  border-top: 0;
+  border-bottom: 2px solid #13AF7E; }
+  .nav_products ul {
+    display: flex;
+    background-color: #FAFAFA;
+    width: 1100px;
+    list-style: none;
+    position: relative;
+    border-top: 1px solid #E3E3E3;
+    border-right: 1px solid #E3E3E3; }
+    .nav_products ul li {
+      width: auto;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      height: 50px;
+      white-space: nowrap; }
+      .nav_products ul li:not(:last-child):after {
+        content: "|";
+        color: #ddd;
+        margin: 3px; }
+      .nav_products ul li a {
+        padding: 0 8px;
+        text-align: center;
+        text-decoration: none;
+        color: #323232;
+        font-size: 16px;
+        display: inline-block;
+        font-weight: 500;
+        height: 100%;
+        line-height: 50px; }
+        .nav_products ul li a:hover {
+          background-color: #666; }
+
+.crumb_seachr {
+  height: 70px;
+  background-color: #FAFAFA; }
+  .crumb_seachr li {
+    font-size: 14px;
+    line-height: 70px; }
+
+.stwrap ul {
+  width: 138px;
+  justify-content: space-between; }
+  .stwrap ul li a {
+    text-decoration: none;
+    color: #323232; }
+    .stwrap ul li a:hover {
+      color: #12af7e; }
+  .stwrap ul .sort_default {
+    font-size: 15px; }
+    .stwrap ul .sort_default a {
+      color: #12af7e; }
+
+.zw-new-bigcard-wrap {
+  width: 880px; }
+
+.zw-new-bigcard-item {
+  background: #fff;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  height: 155px; }
+  .zw-new-bigcard-item a {
+    text-decoration: none; }
+    .zw-new-bigcard-item a img {
+      width: 225px;
+      height: 154px; }
+  .zw-new-bigcard-item .zw-new-bigcard-item-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+    height: 154px; }
+  .zw-new-bigcard-item .zw-new-bigcard-item-tag a {
+    color: #323232;
+    font-weight: 500;
+    font-size: 18px; }
+    .zw-new-bigcard-item .zw-new-bigcard-item-tag a:hover {
+      color: #12af7e; }
+  .zw-new-bigcard-item .zw-new-bigcard-item-middle {
+    padding-left: 0.6rem; }
+    .zw-new-bigcard-item .zw-new-bigcard-item-middle ul {
+      list-style: none; }
+      .zw-new-bigcard-item .zw-new-bigcard-item-middle ul li {
+        max-width: 100px;
+        padding: 2px 6px;
+        height: 20px;
+        line-height: 20px;
+        border: 1px solid #4a90e2;
+        border-radius: 2px;
+        text-align: center;
+        font-size: 14px;
+        color: #4a90e2; }
+  .zw-new-bigcard-item .zw-new-bigcard-item-bottom {
+    height: 40px;
+    position: absolute;
+    top: 7rem; }
+    .zw-new-bigcard-item .zw-new-bigcard-item-bottom .zw-new-bigcard-item-price .item-price span:first-child {
+      color: #ff7363;
+      font-size: 20px; }
+    .zw-new-bigcard-item .zw-new-bigcard-item-bottom .zw-new-bigcard-item-price .item-price span:nth-child(2) {
+      font-size: 13px; }
+    .zw-new-bigcard-item .zw-new-bigcard-item-bottom .zw-new-bigcard-item-price .item-price span.line {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 13px; }
+  .zw-new-bigcard-item .zw-new-bigcard-item-booking {
+    text-align: center;
+    position: relative;
+    left: 32.2rem;
+    top: -3.3rem; }
+    .zw-new-bigcard-item .zw-new-bigcard-item-booking .sold_out span:first-child {
+      color: #12af7e;
+      font-size: 14px; }
+    .zw-new-bigcard-item .zw-new-bigcard-item-booking .sold_out span:last-child {
+      color: #999;
+      font-size: 12px; }
+    .zw-new-bigcard-item .zw-new-bigcard-item-booking .item-booking_btn {
+      width: 120px;
+      height: 40px;
+      background: #ff7362;
+      line-height: 40px;
+      text-align: center;
+      color: #fff; }
+      .zw-new-bigcard-item .zw-new-bigcard-item-booking .item-booking_btn:hover {
+        cursor: pointer; }
+
+.btn_area {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 910px; }
+  .btn_area span {
+    display: inline-block;
+    color: #636363;
+    padding: 2px 7px;
+    text-align: center; }
+    .btn_area span:hover {
+      cursor: pointer; }
+
+.btn_area_active {
+  background: #12af7e;
+  color: #fff;
+  padding: 2px; }

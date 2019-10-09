@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/register.css">
+    <script src="JS/vue.js"></script>
+    <script src="JS/qs.min.js"></script>
+    <script src="js/axios.min.js"></script>
+
+    <title>login</title>
+</head>
+
+<body>
+    <div class="q-container" id="app">
+        <div class="login-container">
+            <div class="login-wrapper">
+                <div class="login-logo">
+                    <a href="index.html">
+                        <img src="img/register/login_logo2.41bd0a52.png" alt="" width="126px" height="46px">
+                    </a>
+                    <span class="title">登录</span>
+                </div>
+                <div class="login-section_login">
+                    <div class="login-section-top mt-2 d-flex ">
+                        <div class="active"><a href="#">账号登录</a></div>
+                        <div><a href="#">游客登录</a></div>
+                    </div>
+                    <form action="">
+                    <div>   
+                        <input type="text" placeholder="用户名" class="my-form-control1 mt-3"  v-focus v-model="uname">
+                        <!-- <span :class="unameClass">请输入用户名不能为空</span> -->
+                    </div>
+                    <div>
+                        <input type="text" placeholder="密码" class="my-form-control1 mt-3" v-model="upwd">
+                        <!-- <span :class="upwdClass">请输入密码不能为空</span> -->
+                    </div>
+                        <p class="login-forget mt-3 mb-2"><a href="#">忘记密码?</a></p>
+                        <button type="button" value="登录" class="btn-green"  @click="login()">登录</button>
+                        <p :class="login_active" class="mt-2" style="width:80%;" v-text="res.msg"></p>
+                    </form>
+                    <div class="login-auth d-flex justify-content-around mt-3">
+                        <a href="#"><img src="img/register/wechat.png" alt=""></a>
+                        <a href="#"><img src="img/register/qq.png" alt=""></a>
+                    </div>
+                    <div class="login-section-bottom pb-4 mt-3">
+                        <span>没有帐号?<a href="register.html" class="ml-2">立即注册</a></span> <span class="ml-5"> 境外手机号注册</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer id="M_footer">
+    </footer>
+    <script src="JS/Login.js"></script>
+    <script src="JS/jquery-3.2.1.js"></script>
+    <script src="JS/ajax.js"></script>
+    <script src="JS/footer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="CSS/base.css">
+     <link rel="stylesheet" href="CSS/register.css">
+     <link rel="stylesheet" href="CSS/footer.css">
+     <script src="JS/qs.min.js"></script>
+     <script src="JS/vue.js"></script>
+     <title>register</title>
+ </head>
+ <body>
+     <!-- 注册容器 -->
+     <div class="q-container" id="app">
+         <div class="login-container">
+             <div class="login-wrapper">
+                 <div class="login-logo">
+                     <a href="index.html">
+                     <img src="img/register/login_logo2.41bd0a52.png" alt="" width="126px" height="46px">
+                    </a>
+                     <span class="title">注册</span>
+                 </div>
+                 <div class="login-section mt-3">
+                    <form  method="get" action="users/register">
+                    <div class="input_list">
+                        <span>用户名:</span><input type="text" v-focus placeholder="请输入您的用户名" maxlength="12" class="my-form-control1 mt-5" name="uname" v-model="uname">
+                        <span class=" input_list_prompt" :class="unameClass">请输入用户名6~12位,只能是数字或字母</span>
+                    </div>
+                    <div class="input_list">
+                        密码:&nbsp &nbsp <input type="password" placeholder="请输入您的密码" maxlength="8" class="my-form-control1" name="upwd" v-model="upwd">
+                        <span class=" input_list_prompt" :class="upwdClass">6-8位数字,字母结合,至少包含一个大写字母和数字</span>
+                    </div>
+                    <div class="input_list">
+                        邮箱:&nbsp &nbsp <input type="email" placeholder="请输入您的邮箱地址" class="my-form-control1" name="email" v-model="email">
+                        <span class=" input_list_prompt" :class="emailClass">请输入正确格式的邮箱地址</span>
+                    </div>
+                    <div class="input_list">
+                        电话:&nbsp &nbsp <input type="phone" placeholder="请输入您的电话号码" maxlength="16" class="my-form-control1" name="phone" v-model="phone">
+                        <span class=" input_list_prompt" :class="phoneClass">请输入有效的电话号码</span>
+                    </div>
+                    <div class="input_list">
+                        姓名:&nbsp &nbsp <input type="text" placeholder="请输入您的姓名" maxlength="16" class="my-form-control1" name="user_name" v-model="user_name">
+                        <span class=" input_list_prompt" :class="user_nameClass">请输入你的姓名</span>
+                    </div>
+                    <div class="input_list">
+                        <span>验证码:</span>  
+                        <input type="text" placeholder="请输入验证码" class="my-form-control2" v-model="v_code">
+                       <canvas width="120" height="30" id="vify" class="ml-4" @click="changeCode()"></canvas>  
+                       <span class=" input_list_prompt" :class="v_codeClass" v-text="v_code_text"></span>    
+                     </div>
+                    <div class="input_list">
+                        性别: <input type="radio" value="1" id="gender1" name="gender" v-model="gender">
+                         <label for="gender1">男</label>
+                         <input type="radio" value="0" id="gender2" v-model="gender">
+                         <label for="gender2">女</label>
+                    </div>
+                    <!-- <button tpye="button" class="btn-green" @click="submit()"> 注册</button> -->
+                    
+                    <input type="button" value="注册" class="btn-green" @click="submit()">
+                    <span :class="promit_register" v-text="res.msg"></span>
+                    </form>
+                    <button type="button" value="登录" class="btn-login btn_position" v-if="orLoign" @click="login()">登录</button>
+                    <div class="login-section-bottom pb-4 mt-3 ">
+                        <span>已有穷游帐号?<a href="login.html" class="ml-2">登录</a></span> <span class="ml-5"> 同意<a href="#">会员条款</a>和<a href="#">免责声明</a></span>
+                    </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- 底部 -->
+    <footer id="M_footer">  
+    </footer>
+    
+        <script src="JS/jquery-3.2.1.js"></script>
+        <script src="JS/ajax.js"></script>
+        <script src="JS/axios.min.js"></script>
+        <script src="JS/footer.js"></script>
+         <script src="JS/user.js"></script>
+ </body>
+ </html>

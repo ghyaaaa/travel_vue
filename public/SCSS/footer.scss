@@ -1,0 +1,98 @@
+@import"color.scss";
+
+//底部样式
+#m_footer{
+  background:$my_backgroundColor;
+}
+//清除上边距带来的影响 加一个table
+#m_footer::before{
+  content:"";
+  display:table;
+}
+#m_footer::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+#footer{
+  width:1160px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display:flex;
+  margin-top:50px;
+  ul{
+    list-style: none;
+    float:left;
+    margin-left:90px;
+ 
+    &:nth-child(5) 
+      //关于我们众小图标的尺寸大小
+    img{
+         width:25px;
+         height:25px;
+         padding: 5px;
+         li{
+           display:flex;
+         }
+    }
+    h5{
+      color:$my_t_fontColor;
+      margin-bottom:10px;
+    }
+    //关于下载图标的大小
+    &:last-child{
+        img{
+          width:135px;
+          height:40px;
+        }
+    }
+  }
+  a{
+    color:$my_fontColor;
+    text-decoration: none;
+    font-size: $my_fontSize;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+//Q穷游
+#footer-2{
+  width:1160px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  margin-top:50px;
+
+  //文字不换行
+  white-space: nowrap;
+  //q穷游图片大小
+  img{
+    width:110px;
+    height:40px;
+    margin-left: 80px;
+  }
+  ul{
+    list-style: none;
+    h6{
+      margin-left:20px;
+      margin-top:3px ;
+      color:$my_fontColor;
+      font-size: $my_fontSize;
+      //最下方文字中的小链接样式
+      a{
+        color:$my_fontColor;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+

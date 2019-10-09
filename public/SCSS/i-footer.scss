@@ -1,0 +1,156 @@
+@import"color.scss";
+
+//底部文字导航
+.zw-footerprepend{
+    background: $my-main-Color;
+   line-height:50px;
+    .zw-footer-nav{
+      list-style: none;
+      white-space: nowrap;
+      text-align: center;
+      padding:10px;
+      
+      li {
+         &:not(:last-child)::after{
+              content:"|";
+              margin:0 1.2rem;
+              color:#ddd;
+          }
+        a{
+          font-size:18px;
+          color:#323232;
+          font-weight: 400;
+          text-decoration: none;
+          &:hover{
+              color:$my_hoverColorcolor;
+          }
+        }
+      }
+    }
+  }
+//   底部特色 列表
+.zw-footer-feature{
+   list-style: none;
+   padding:20px;
+   display:flex;
+   .zw-footer-feature-icon{
+      
+       img{
+         width:56px;
+         height:56px;
+       }
+      }
+      .zw-footer-title{
+        white-space: nowrap;
+          font-size: 16px;
+          font-weight:500;
+          line-height: 16px;
+      }
+      .zw-footer-content{
+          color:$my_footer_color;
+          position: relative;
+          top:20px;
+          left:-60px;
+          width:300px;
+          line-height: 16px;
+      }
+
+}
+//br样式
+.my-br{
+   line-height: 20px;
+}
+//底部样式
+.my_i_footer{
+   background:$my_backgroundColor;
+   color:$my_fontColor;
+   //字体不换行
+   white-space: nowrap;
+}
+.footer{
+    width:1160px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    p{
+        font-size:12px;
+    }
+}
+
+      //列表 关于穷游商城
+    .footer1-about{
+        display:flex;
+        list-style: none;
+        font-size: $my_fontSize;
+      li{
+         margin-left: 20px;
+          span{
+              margin-left:20px;
+          }
+          a{
+            color:$my_fontColor;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+           }
+      }
+  
+     //友情链接
+      &:last-child{
+          margin-top:10px;
+      }
+    }
+
+    //列表的样式
+    .footer1-1{
+        display:flex;
+        h1{
+            color:#fff;
+            margin-top: 50px;
+        }
+       
+        h6{
+            padding:55px 20px;
+            font-weight: normal;
+        }
+    }
+    //下内边距 友情链接ul
+    .footer1{
+        ul{
+            &:last-child{
+                padding-bottom:50px;
+            }
+        }
+    }
+    //关注我们
+    .footer2{
+        ul{
+            margin-top:60px;
+            h2{
+                color:#fff;
+                font-weight:normal;
+                margin-top:10px;
+            }
+        }
+        .footer2-1{
+            h3{
+                color:#fff;
+                font-weight:normal;
+            }
+            ul{
+                margin:10px auto;
+                li:last-child{
+                    background: #FFF;
+                    width:100px;
+                    height:100px;
+                    img{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+

@@ -1,0 +1,195 @@
+<header id="header">
+    <!-- 一级导航 -->
+    <div class="q-layer-header">
+        <div class="header-inner ">
+            <a href="#"><img src="img/icon/logo_116x36.png" alt=""></a>
+            <div class="q-header-nav d-flex ml-4">
+                <ul>
+                    <li><a href="#">目的地</a></li>
+                    <li><a href="#">锦囊</a></li>
+                    <!-- 下拉菜单 -->
+                    <li class="dropdown"><a href="#">社区</a><span class="dropdown-toggle"></span>
+                        <ol class="dropdown-menu">
+                            <li>
+                                <img src="img/hidden-icon/luntan.png" alt=""><a href="#"> 旅行论坛</a>
+                            </li>
+                            <li> <img src="img/hidden-icon/wenda.png" alt=""> <a href="#">旅行问答</a></li>
+                            <li><img src="img/hidden-icon/jne.png" alt=""><a href="#">JNE旅行生活美学</a></li>
+                            <li><img src="img/hidden-icon/tongban1.png" alt=""><a href="#">结伴同游</a></li>
+                            <li><img src="img/hidden-icon/tongban.png" alt=""><a href="#">负责任的旅行</a></li>
+                            <li><img src="img/hidden-icon/sheying.png" alt=""><a href="#">特别策划</a></li>
+                            <li><img src="img/hidden-icon/sheyiji.png" alt=""><a href="#">旅行精选视频</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#">行程助手</a></li>
+                    <li class="dropdown"><a href="#">商城</a><span class="dropdown-toggle"></span><img src="img/icon/z-flag.gif"
+                            alt="">
+                        <ol class="dropdown-menu">
+                            <li><img src="img/hidden-icon/xingli.png" alt=""><a href="#">机酒自由行</a></li>
+                            <li><img src="img/hidden-icon/dangdi.png" alt=""><a href="#">当地玩乐</a></li>
+                            <li><img src="img/hidden-icon/qianzheng.png" alt=""><a href="#">签证</a></li>
+                            <li><img src="img/hidden-icon/chuzuche.png" alt=""><a href="#">租车自驾</a></li>
+                            <li><img src="img/hidden-icon/youlun.png" alt=""><a href="#">邮轮</a></li>
+                            <li><img src="img/hidden-icon/baoxian.png" alt=""><a href="#">保险</a></li>
+                            <li><img src="img/hidden-icon/sirendingz.png" alt=""><a href="#">私人定制</a></li>
+                            <li><img src="img/hidden-icon/tielu.png" alt=""><a href="#">欧洲铁路</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#">机票</a></li>
+                    <li class="dropdown"><a href="#">酒店·民宿</a><span class="dropdown-toggle"></span>
+                        <ol class="dropdown-menu1">
+                            <li><img src="img/hidden-icon/hotel.png" alt=""><a href="#">酒店</a></li>
+                            <li><img src="img/hidden-icon/aibilin.png" alt=""><a href="#">爱彼迎</a></li>
+                            <li><img src="img/hidden-icon/chinese hotel.png" alt=""><a href="#">华人旅馆</a></li>
+                        </ol>
+                    </li>
+                    <li class="dropdown"><a href="#">独家深度</a> <span class="dropdown-toggle"></span>
+                        <ol class="dropdown-menu1">
+                            <li><img src="img/hidden-icon/tielu.png" alt=""><a href="#">特色长线</a></li>
+                            <li><img src="img/hidden-icon/dujialvyou.png" alt=""><a href="#">独家旅游</a></li>
+                            <li><img src="img/hidden-icon/Q-home.png" alt=""><a href="#">Q-Home</a></li>
+                        </ol>
+                    </li>
+                    <li class="dropdown"><a href="#">穷游APP</a><span class="dropdown-toggle"></span>
+                        <ol class="dropdown-menu1">
+                            <li><img src="img/hidden-icon/qiongyouapp.png" alt=""><a href="#">穷游App</a></li>
+                            <li><img src="img/hidden-icon/xingchengzushou.png" alt=""><a href="#">行程助手</a></li>
+                            <li><img src="img/hidden-icon/qiongyoujinnang.png" alt=""><a href="#">穷游锦囊</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            <!--导航栏右侧小图标 -->
+            <div class="q-header-fun" v-if="islogin">
+                <ul>
+                    <li>
+                        <span>
+                            <a href="#">
+                                <input type="text" class="input mb-2"></a>
+                            <img src="img/icon/fangdajing.png" alt="">
+                        </span>
+                    </li>
+                    <li class="my_fontColor">|</li>
+                    <li><a href="#"><img src="img/icon/qq.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icon/micro blog.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icon/wechat.png" alt=""></a></li>
+                    <li><a href="register.html">注册</a></li>
+                    <li><a href="login.html">登录</a></li>
+                </ul>
+            </div>
+            <!-- 登录后-->
+            <div class="q-header-fun" v-else id="signin">
+                <ul>
+                    <li>
+                        <span>
+                            <a href="#">
+                                <input type="text" class="input mb-2"></a>
+                            <img src="img/icon/fangdajing.png" alt="">
+                        </span>
+                    </li>
+                    <li class="my_fontColor">|</li>
+                    <li><a href="#"><img src="img/icon/qq.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icon/micro blog.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/icon/wechat.png" alt=""></a></li>
+                    <li><a>Welcome</a> <span id="uanme" style="color:#fff;">Gavin</span></li>
+                    <li><a id="btnSignout" href="">注销</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 二级绿色背景导航 -->
+    <div class="zw-header-new-wrapper">
+        <div class="zw-header-new-nav container d-flex justify-content-around">
+            <ul class="zw-header-new-mainnav list-unstyle d-flex  ">
+                <li class="dropdown p-3"><a href="#">机酒自由行</a><span class="dropdown-toggle-white"></span>
+                    <ol class="dropdown-menu3  ">
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">自由行</a></li>
+                        <li><a href="#">特价机票</a></li>
+                        <li><a href="#">酒店</a></li>
+                        <li> <a href="#">邮轮</a></li>
+                        <li><a href="#">马尔代夫<img src="img/hidden-icon/re.png" alt=""></a></li>
+                    </ol>
+                </li>
+                <li class="p-3"><a href="#">特价机票</a></li>
+                <li class="dropdown p-3"><a href="#">跟团游</a><span class="dropdown-toggle-white"></span>
+                    <ol class="dropdown-menu3 d-flex">
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">跟团游</a></li>
+                        <li><a href="#">半自助游<img src="img/hidden-icon/re.png" alt=""></a></li>
+                    </ol>
+                </li>
+                <li class="p-3"><a href="#">酒店</a></li>
+                <li class="dropdown p-3"><a href="#">当地玩乐</a><span class="dropdown-toggle-white"></span>
+                    <ol class="dropdown-menu3 ">
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">日游小团</a></li>
+                        <li><a href="#">深度体验</a></li>
+                        <li><a href="#">门票票卷</a></li>
+                        <li><a href="#">餐饮美食</a></li>
+                        <li><a href="#">Wifi电话卡</a></li>
+                        <li><a href="#">购物</a></li>
+                        <li><a href="#">保险</a></li>
+                        <li><a href="#">接送机</a></li>
+                        <li><a href="#">欧洲铁路<img src="img/hidden-icon/re.png" alt=""></a></li>
+                    </ol>
+                </li>
+                <li class="p-3"><a href="#">海岛游</a></li>
+                <li class="p-3"><a href="#">邮轮</a></li>
+                <li class="p-3"><a href="#">租车自驾</a></li>
+                <li class="p-3  dropdown"><a href="#">深度旅行</a><span class="dropdown-toggle-white"></span>
+                    <ol class="dropdown-menu3 ">
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">CityWalk</a></li>
+                        <li><a href="#">特色长线</a></li>
+                        <li><a href="#">Q-home</a></li>
+                    </ol>
+                </li>
+            </ul>
+            <!-- 右侧小导航 -->
+            <ul class="zw-header-new-subnav list-unstyle d-flex p-3">
+                <li><a href="#">签证</a></li>
+                <li><a href="#">保险</a></li>
+                <li><a href="#">WIFI电话卡</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 三级导航 穷游商城 加搜索框 -->
+    <div class="zw-home-header">
+        <div class="d-flex justify-content-between container pt-3">
+            <!-- 标题 穷游商城大字 -->
+            <div class="zw-home-header-logo ml-5 ">
+                <a href="index.html">
+                    <h1>穷游商城</h1>
+                </a>
+            </div>
+            <!-- 搜素框 -->
+    
+            <div class="zw-home-header-search mr-5">
+                    <datalist id="s_advice">
+                            <option>日本</option>
+                            <option>国庆</option>
+                            <option>美国</option>
+                            <option>欧洲</option>
+                         </datalist>
+                <input type="text" name="keyword" placeholder="搜索国家、城市、产品" class="my-form-control" list="s_advice">
+                <div class="input-group-append h-75">
+                    <img class="btn p-0" src="img/icon/fangdajinghei.png">
+                </div>
+            </div>
+            <!-- 右边下载 -->
+            <div class="zw-home-header-app d-flex ml-5 ">
+                <div class="logo">
+                    <img src="img/1-nav/qyerlogo.png" alt="">
+                </div>
+                <div class="title-box ">
+                    <p>手机下单立享优惠</p>
+                    <p>尽在穷游App</p>
+                </div>
+                <!-- 下载按钮 -->
+                <a href="#" class="btn btn-green mt-2 ml-3 ">下载</a>
+            </div>
+        </div>
+    </div>
+</header>
